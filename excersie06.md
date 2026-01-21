@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
     participant browser
     participant server
@@ -12,3 +13,4 @@ sequenceDiagram
 
     Note right of browser: Browser updates UI using JavaScript
     Note right of browser: No page reload happens
+```

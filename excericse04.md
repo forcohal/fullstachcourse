@@ -25,3 +25,18 @@ sequenceDiagram
     deactivate server
 
     Note right of browser: The browser executes the callback function that renders the notes
+
+sequenceDiagram
+    participant browser
+    participant server
+
+    Note left of browser: User types a new note in the input field
+    browser->>browser: JS captures input value
+
+    browser->>server: POST /notes (new note content)
+    activate server
+    server-->>browser: 200 OK (note saved)
+    deactivate server
+
+    Note right of browser: JS callback runs
+    Note right of browser: New note is added to the DOM dynamically
